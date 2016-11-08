@@ -12,10 +12,13 @@ import Prelude
 newtype Natural =
   UnsafeMakeNatural Int
 
+-- | Construct a natural number from an integer.
+-- | If the integer is less than 0, then the result will be 0 (nat)
 intToNat :: Int -> Natural
 intToNat i | i >= 0 = UnsafeMakeNatural i
 intToNat _          = UnsafeMakeNatural 0
 
+-- | Convert a natural number back to an integer
 natToInt :: Natural -> Int
 natToInt (UnsafeMakeNatural i) = i
 
@@ -37,9 +40,9 @@ instance semiringNatural :: Semiring Natural where
   zero = intToNat 0
   add = binaryViaInt (+)
 
--- not a Ring as it violates 'additive inverse' law:
--- `a - a = (zero - a) + a = zero`
-
+-- | Subtract a natural number from another.
+-- | This is provided due to Natural not being a Ring as it violates the
+-- | additive inverse law: `a - a = (zero - a) + a = zero`
 minus :: Natural -> Natural -> Natural
 minus = binaryViaInt (-)
 
