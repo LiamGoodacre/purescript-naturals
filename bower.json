@@ -1,5 +1,13 @@
 {
   "name": "purescript-naturals",
+  "homepage": "https://github.com/LiamGoodacre/purescript-naturals",
+  "description": "Natural numbers",
+  "author": "Liam Goodacre",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LiamGoodacre/purescript-naturals.git"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
