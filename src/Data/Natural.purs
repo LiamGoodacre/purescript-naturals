@@ -31,6 +31,9 @@ binaryViaInt f l r = intToNat (f (natToInt l) (natToInt r))
 instance eqNatural :: Eq Natural where
   eq l r = natToInt l == natToInt r
 
+instance ordNatural :: Ord Natural where
+  compare l r = natToInt l `compare` natToInt r
+
 instance showNatural :: Show Natural where
   show = show <<< natToInt
 
