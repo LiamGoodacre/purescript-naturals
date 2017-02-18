@@ -15,7 +15,7 @@
     "output"
   ],
   "dependencies": {
-    "purescript-prelude": "^2.1.0"
+    "purescript-prelude": "^2.4.0"
   },
   "devDependencies": {
     "purescript-psci-support": "^2.0.0"
