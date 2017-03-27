@@ -3,7 +3,7 @@
   "scripts": {
     "clean": "rimraf output && rimraf .pulp-cache",
     "build": "pulp build -- --censor-lib --strict",
-    "test": "pulp test",
+    "test": "",
     "build:docs": "rimraf docs && pulp docs"
   },
   "devDependencies": {
