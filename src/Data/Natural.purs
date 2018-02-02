@@ -9,6 +9,9 @@ where
 
 import Prelude
 
+import Data.Enum (class Enum, succ, pred)
+import Data.Maybe (Maybe(Just, Nothing))
+
 newtype Natural =
   UnsafeMakeNatural Int
 
@@ -33,6 +36,13 @@ instance eqNatural :: Eq Natural where
 
 instance ordNatural :: Ord Natural where
   compare l r = natToInt l `compare` natToInt r
+
+instance enumNatural :: Enum Natural where
+  succ :: Natural -> Maybe Natural
+  succ n = Just (n + one)
+  pred :: Natural -> Maybe Natural
+  pred n = if n == zero then Nothing else Just (n +- one)
+
 
 instance showNatural :: Show Natural where
   show = show <<< natToInt
