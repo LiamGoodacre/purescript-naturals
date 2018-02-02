@@ -9,7 +9,7 @@ where
 
 import Prelude
 
-import Data.Enum (class Enum, succ, pred)
+import Data.Enum (class Enum)
 import Data.Maybe (Maybe(Just, Nothing))
 
 newtype Natural =
