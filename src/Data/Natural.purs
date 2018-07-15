@@ -1,11 +1,11 @@
 module Data.Natural
-( Natural()
-, intToNat
-, natToInt
-, minus
-, (+-)
-)
-where
+  ( Natural()
+  , intToNat
+  , natToInt
+  , minus
+  , (+-)
+  )
+  where
 
 import Prelude
 
@@ -43,7 +43,6 @@ instance enumNatural :: Enum Natural where
   pred :: Natural -> Maybe Natural
   pred n = if n == zero then Nothing else Just (n +- one)
 
-
 instance showNatural :: Show Natural where
   show = show <<< natToInt
 
@@ -54,6 +53,7 @@ instance semiringNatural :: Semiring Natural where
   add = binaryViaInt (+)
 
 -- | Subtract a natural number from another.
+-- | When `l < r` then `l +- r = 0`.
 -- | This is provided due to Natural not being a Ring as it violates the
 -- | additive inverse law: `a - a = (zero - a) + a = zero`
 minus :: Natural -> Natural -> Natural
