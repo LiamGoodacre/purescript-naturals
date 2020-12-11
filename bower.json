@@ -15,11 +15,11 @@
     "output"
   ],
   "dependencies": {
-    "purescript-enums": "^4.0.0",
-    "purescript-maybe": "^4.0.0",
-    "purescript-prelude": "^4.0.1"
+    "purescript-enums": "master",
+    "purescript-maybe": "master",
+    "purescript-prelude": "master"
   },
   "devDependencies": {
-    "purescript-psci-support": "^4.0.0"
+    "purescript-psci-support": "master"
   }
 }
